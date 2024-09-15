@@ -2,5 +2,10 @@
     "HomePage": {
       "title": "Hello world!",
       "about": "Go to the about page"
+    },
+    "LocaleSwitcher":{
+      "label": "Language Switcher",
+      "locale": "{locale, select, en {🇺🇸 English} es {🇦🇷 Español} other {Unknown}}"
     }
 }
+

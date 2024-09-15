@@ -2,5 +2,9 @@
     "HomePage": {
       "title": "Hola mundo!",
       "about": "nose bro"
+    },
+    "LocaleSwitcher":{
+      "label": "Selector de Lenguaje",
+      "locale": "{locale, select, en {🇺🇸 English} es {🇦🇷 Español} other {Unknown}}"
     }
 }

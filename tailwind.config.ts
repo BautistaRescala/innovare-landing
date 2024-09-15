@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        red:{
+          950:'#e00505' //rojo del logo
+        }
       },
     },
   },
