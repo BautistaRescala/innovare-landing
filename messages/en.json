@@ -1,11 +1,18 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
-    },
-    "LocaleSwitcher":{
-      "label": "Language Switcher",
-      "locale": "{locale, select, en {🇺🇸 English} es {🇦🇷 Español} other {Unknown}}"
-    }
+  "Navigation":{
+    "home":"Home",
+    "about":"About"
+  },
+  "HomePage": {
+  },
+  "About":{
+    "text":"This is the about page"
+  },
+  "LocaleSwitcher":{
+    "label": "Language Selector",
+    "locale": "{locale, select, en {🇺🇸 English} es {🇦🇷 Español} other {Unknown}}"
+  },
+  "LoremIpsum":{
+    "text":"lorem ipsum"
+  }
 }
-

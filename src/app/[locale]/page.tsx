@@ -1,18 +1,18 @@
 import {useTranslations} from 'next-intl';
-import {Link} from '@/i18n/routing';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import useLocale from 'next-intl';
-
-
 
 export default function HomePage({params: {locale}}:{params: {locale:string}}) {
   unstable_setRequestLocale(locale);
-  const t = useTranslations('LocaleSwitcher');
-
+  const t = useTranslations('LoremIpsum');
   
   return (
-    <div>
-      <h1>{t('locale',{locale:locale })}</h1>
+    <div className='mt-24'>
+      <h1>{t('text')}</h1>
+      <h1>{t('text')}</h1>
+      <h1>{t('text')}</h1>
+      <h1>{t('text')}</h1>
+      <h1>{t('text')}</h1>
+      <h1>{t('text')}</h1>
     </div>
   );
 }

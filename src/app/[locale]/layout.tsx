@@ -1,10 +1,10 @@
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import '@/globals.css';
-import LocaleSwitcher from '@/components/LocaleSwitcher';
 import {routing} from '@/i18n/routing'
 import {unstable_setRequestLocale} from 'next-intl/server';
-import {useLocale, useTranslations} from 'next-intl';
+import nav from '@/components/nav/Nav';
+import Nav from '@/components/nav/Nav';
 
 
 export function generateStaticParams(){
@@ -27,7 +27,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <LocaleSwitcher></LocaleSwitcher>
+          <Nav></Nav>
           {children}
         </NextIntlClientProvider>
       </body>
