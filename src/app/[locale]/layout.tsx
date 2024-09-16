@@ -3,7 +3,6 @@ import {getMessages} from 'next-intl/server';
 import '@/globals.css';
 import {routing} from '@/i18n/routing'
 import {unstable_setRequestLocale} from 'next-intl/server';
-import nav from '@/components/nav/Nav';
 import Nav from '@/components/nav/Nav';
 
 

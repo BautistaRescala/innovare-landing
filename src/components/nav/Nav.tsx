@@ -13,11 +13,12 @@ export default function Nav(){
         "/":"home",
         "/about":"about"
     }
-    
+
     function generateLinks()
-    {return(Object.keys(links).map((key,value) => (
-        <Link className={clsx("text-slate-500 hover:text-slate-700",
-        current_path == key ? "text-red-950":"")}
+    {return(Object.keys(links).map((key) => (
+        <Link className={
+            clsx(current_path == key ? "text-red-950":"text-slate-500 hover:text-slate-700")
+        }
         href={key}>{t(links[key])}</Link>
     )))}//This function generates Links automatically to reuse styles
     
