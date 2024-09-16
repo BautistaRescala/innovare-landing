@@ -16,7 +16,7 @@ export default function Nav(){
 
     function generateLinks()
     {return(Object.keys(links).map((key) => (
-        <Link className={
+        <Link key={key} className={
             clsx(current_path == key ? "text-red-950":"text-slate-500 hover:text-slate-700")
         }
         href={key}>{t(links[key])}</Link>
