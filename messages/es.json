@@ -1,18 +1,19 @@
 {
-    "Navigation":{
-      "home":"Início",
-      "about":"Acerca De"
-    },
-    "HomePage": {
-    },
-    "About":{
-      "text":"Esta es la about page"
-    },
-    "LocaleSwitcher":{
-      "label": "Selector de Lenguaje",
-      "locale": "{locale, select, en {🇺🇸 English} es {🇦🇷 Español} other {Unknown}}"
-    },
-    "LoremIpsum":{
-      "text":"lorem ipsum"
-    }
+  "Navigation":{
+    "navigation":"Navegación",
+    "home":"Início",
+    "about":"Acerca De"
+  },
+  "HomePage": {
+  },
+  "About":{
+    "text":"Esta es la about page"
+  },
+  "LocaleSwitcher":{
+    "label": "Selector de Lenguaje",
+    "locale": "{locale, select, en {🇺🇸 English} es {🇦🇷 Español} other {Unknown}}"
+  },
+  "LoremIpsum":{
+    "text":"lorem ipsum"
+  }
 }

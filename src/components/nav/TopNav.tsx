@@ -12,7 +12,9 @@ export default function TopNav({children}:{children: React.ReactNode;}){
                 height={72}>
             </Image>
             {children}
+            <div className="hidden sm:block">
             <LocaleSwitcher></LocaleSwitcher>
+            </div>
         </div>
     )
 }
