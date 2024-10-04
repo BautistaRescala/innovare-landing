@@ -5,6 +5,9 @@
     "about":"About"
   },
   "HomePage": {
+    "innovare":"Innovare Software SRL",
+    "staff":"Professional Staff Augmentation",
+    "applications":"Efficient and scalable custom applications. Reduce your costs with our development team."
   },
   "About":{
     "text":"This is the about page"

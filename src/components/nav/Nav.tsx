@@ -17,7 +17,7 @@ export default function Nav(){
         "/about":"about"
     }
 
-
+    //Links
     function generateLinks()
     {return(Object.keys(links).map((key) => (
         <Link key={key} className={
@@ -34,12 +34,11 @@ export default function Nav(){
         }
         href={key}>{t(links[key])}</Link>
     )))}
-
+    //end Links
     const [isOpen,setOpen] = useState(false);
     function handleClick(){
         setOpen(!isOpen)
     }
-
     return(
         <TopNav>
             {generateLinks()}

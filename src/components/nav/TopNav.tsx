@@ -1,15 +1,31 @@
+'use client';
 import LocaleSwitcher from '@/components/LocaleSwitcher'
 import Image from 'next/image';
 import logo from '@/assets/innovare-logo.svg'
-export default function TopNav({children}:{children: React.ReactNode;}){
+import { Quicksand } from 'next/font/google'
+import clsx from 'clsx';
+import { useState } from 'react';
+const textfont = Quicksand({subsets:['latin']})
 
+
+
+export default function TopNav({children}:{children: React.ReactNode;}){
+    const [isScrolledTop,setScrolledTop] = useState(true)
+    function handleScroll(){
+        if(window.scrollY == 0){
+            setScrolledTop(true)
+        }else{
+            setScrolledTop(false)
+        }
+    }
+    window.addEventListener("scroll",handleScroll)
     return(
-        <div className="h-24 px-4 bg-gray-200 fixed w-full top-0 start-0 flex justify-between items-center ">
+        <div className={clsx(`${textfont.className} bg-white h-20 px-4 fixed w-full top-0 start-0 flex justify-between items-center`, isScrolledTop ? "transition ease-in-out delay-150 shadow-none":"transition ease-in-out delay-150 shadow-xl")}>
             <Image 
                 src={logo} 
                 alt="Innovare Logo"
-                width={72}
-                height={72}>
+                width={290}
+                height={60}>
             </Image>
             {children}
             <div className="hidden sm:block">
