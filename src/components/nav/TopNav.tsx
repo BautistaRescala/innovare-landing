@@ -4,7 +4,7 @@ import Image from 'next/image';
 import logo from '@/assets/innovare-logo.svg'
 import { Quicksand } from 'next/font/google'
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 const textfont = Quicksand({subsets:['latin']})
 
 
@@ -18,7 +18,11 @@ export default function TopNav({children}:{children: React.ReactNode;}){
             setScrolledTop(false)
         }
     }
-    window.addEventListener("scroll",handleScroll)
+
+    if(typeof window !== undefined){
+        window.addEventListener("scroll",handleScroll)
+    }
+    
     return(
         <div className={clsx(`${textfont.className} bg-white h-20 px-4 fixed w-full top-0 start-0 flex justify-between items-center`, isScrolledTop ? "transition ease-in-out delay-150 shadow-none":"transition ease-in-out delay-150 shadow-xl")}>
             <Image 
