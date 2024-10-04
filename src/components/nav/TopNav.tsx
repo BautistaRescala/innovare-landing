@@ -19,10 +19,10 @@ export default function TopNav({children}:{children: React.ReactNode;}){
         }
     }
 
-    if(typeof window !== undefined){
+    if(typeof window !== "undefined"){
         window.addEventListener("scroll",handleScroll)
     }
-    
+
     return(
         <div className={clsx(`${textfont.className} bg-white h-20 px-4 fixed w-full top-0 start-0 flex justify-between items-center`, isScrolledTop ? "transition ease-in-out delay-150 shadow-none":"transition ease-in-out delay-150 shadow-xl")}>
             <Image 
