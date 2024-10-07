@@ -1,10 +1,9 @@
 'use client';
 import LocaleSwitcher from '@/components/LocaleSwitcher'
 import Image from 'next/image';
-import logo from '@/assets/innovare-logo.svg'
 import { Quicksand } from 'next/font/google'
 import clsx from 'clsx';
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 const textfont = Quicksand({subsets:['latin']})
 
 
@@ -24,19 +23,19 @@ export default function TopNav({children}:{children: React.ReactNode;}){
     }
 
     return(
-        <div className={clsx(`${textfont.className} bg-white 
+        <div className={clsx(`bg-white z-50
         h-20 px-4 fixed w-full top-0 start-0 flex justify-between items-center transition-all`, 
         isScrolledTop ? 
-        "hadow-none":
+        "shadow-none":
         "shadow-xl")}>
-            <Image 
-                src={logo} 
+            <Image className=''
+                src="/innovare-logo.svg" 
                 alt="Innovare Logo"
                 width={290}
                 height={60}>
             </Image>
             {children}
-            <div className="hidden sm:block">
+            <div className="hidden sm:block appearance-none font-extrabold">
             <LocaleSwitcher></LocaleSwitcher>
             </div>
         </div>

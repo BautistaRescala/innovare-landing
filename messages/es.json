@@ -7,14 +7,14 @@
   "HomePage": {
     "innovare":"Innovare Software SRL",
     "staff":"Staff Augmentation Professional",
-    "applications":"Aplicaciones personalizadas eficientes y escalables. Reduzca los gastos generales con un equipo de desarrollo a medida."
+    "applications":"Aplicaciones personalizadas eficientes y escalables de un equipo a medida."
   },
   "About":{
     "text":"Esta es la about page"
   },
   "LocaleSwitcher":{
     "label": "Selector de Lenguaje",
-    "locale": "{locale, select, en {🇺🇸 English} es {🇦🇷 Español} other {Unknown}}"
+    "locale": "{locale, select, en {EN} es {ES} other {Unknown}}"
   },
   "LoremIpsum":{
     "text":"lorem ipsum"

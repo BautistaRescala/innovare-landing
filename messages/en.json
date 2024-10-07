@@ -14,7 +14,7 @@
   },
   "LocaleSwitcher":{
     "label": "Language Selector",
-    "locale": "{locale, select, en {🇺🇸 English} es {🇦🇷 Español} other {Unknown}}"
+    "locale": "{locale, select, en {EN} es {ES} other {Unknown}}"
   },
   "LoremIpsum":{
     "text":"lorem ipsum"

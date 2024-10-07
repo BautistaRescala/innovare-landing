@@ -4,7 +4,8 @@ import clsx from 'clsx';
 import {useParams} from 'next/navigation';
 import {ChangeEvent, ReactNode, useTransition} from 'react';
 import {Locale, usePathname, useRouter} from '@/i18n/routing';
-
+import { Outfit } from 'next/font/google';
+const selectFont = Outfit({subsets:["latin"]})
 type Props = {
   children: ReactNode;
   defaultValue: string;
@@ -40,7 +41,7 @@ export default function LocaleSwitcherSelect({
     >
       <p className="sr-only">{label}</p>
       <select
-        className="inline-flex text-gray-800 appearance-none bg-transparent py-3 pl-2 pr-6"
+        className={`${selectFont.className}inline-flex text-black appearance-none bg-transparent py-3 pl-2 pr-6`}
         defaultValue={defaultValue}
         disabled={isPending}
         onChange={onSelectChange}

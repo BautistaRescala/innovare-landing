@@ -50,21 +50,30 @@ export default function Nav(){
     }
     return(
         <TopNav>
-            {generateLinks()}
-
+            {
+            Object.keys(links).map((key) => ( //Top Nav Links
+                <Link key={key} href={key} className={
+                    clsx(current_path == key ?
+                    "text-red-950" :
+                    "text-slate-500 hover:text-slate-700",
+                    "hidden sm:block")}
+                >{t(links[key])}</Link>
+                )
+            )
+            }
             <button onClick={closeSideNav} className="block pr-5 sm:hidden">
                 {burgerMenu()}
             </button>
 
             <SideNav isOpen={isOpen}>
-            {
+            {//Side Nav Links
             Object.keys(links).map(
                 (key) => (
                     <button key={key} onClick={() => sideNavRouteToLink(key)}>
-                        {t(links[key])}
+                    {t(links[key])}
                     </button>
-                    )
                 )
+            )
             }
             </SideNav>
         </TopNav>
