@@ -9,17 +9,19 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('HomePage');
   return (
-    <div className='mt-20'>
-      <div  className='flex pl-10 justify-between'>
-        <p className={`${contentfont.className} pt-16 max-w-[680px] text-6xl z-10`}
-        >{t.rich("applications",{br:() => <br></br>})}</p>
-        <div className="hidden md:block flex-none relative z-10 before:absolute before:w-full before:h-full before:bg-gradient-to-b from-transparent from-0% to-98% to-white">
-          <div className="flex-none z-15 absolute w-full h-full bg-gradient-to-r from-white to-transparent from-0% to-30%"></div>
-          <Image src="/homepage1.jpg" alt="officePhoto" width={520} height={676}
-          className=""></Image>
+    <div>
+      <div className="mt-20 md:bg-[url('/homepage1.jpg')] bg-contain bg-no-repeat bg-right">
+        <div className="bg-gradient-to-r from-white to-transparent from-65% to-100%">
+          <div className="bg-gradient-to-t from-white to-transparent from-5% to-100%">
+            <div className='pl-10 pr-10 pb-48'>
+              <p className={`${contentfont.className} pt-16 max-w-[680px] text-5xl md:text-7xl`}
+              >{t.rich("applications",{br:() => <br></br>})}</p>
+            </div>
           </div>
+        </div>
       </div>
-      <div className="h-[1200px] bg-pink-600"></div>
+      <div className="bg-pink-500 h-[1280px]"></div>
     </div>
+    
   );
 }
