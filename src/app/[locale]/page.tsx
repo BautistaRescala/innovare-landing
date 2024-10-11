@@ -9,8 +9,8 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
   const t = useTranslations('HomePage');
   return (
     <div>
-      <div className="mt-20 md:bg-[url('/homepage1.jpg')] bg-contain bg-no-repeat bg-right">
-        <div className="bg-gradient-to-r from-white to-transparent from-65% to-100%">
+      <div className="mt-20 bg-[url('/homepage1.jpg')] bg-contain bg-no-repeat bg-right">
+        <div className="bg-gradient-to-r from-white to-transparent from-30% md:from-65% to-100%">
           <div className="bg-gradient-to-t from-white to-transparent from-5% to-100%">
             <div className='pl-10 pr-10 pb-48'>
               <p className={`${contentfont.className} pt-16 max-w-[680px] text-5xl md:text-7xl`}

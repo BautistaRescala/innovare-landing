@@ -31,7 +31,6 @@ export default function Nav({children}:{children:ReactNode}){
         }else{
             document.body.style.overflow = "auto";
         }
-        console.log(document.body.style.overflow)
     },
     [isOpen]
     )
