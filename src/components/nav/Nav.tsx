@@ -17,8 +17,8 @@ export default function Nav({children}:{children:ReactNode}){
     interface links { [key: string]: string; }
     const links: links= {
         "/":"home",
+        "/services":"services",
         "/about":"about",
-        "/services":"services"
     }
     //functionality for opening and closing SideNav
     const [isOpen,setOpen] = useState(false);

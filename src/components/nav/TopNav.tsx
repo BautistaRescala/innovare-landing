@@ -27,7 +27,7 @@ export default function TopNav({children}:{children: React.ReactNode;}){
         h-20 px-4 fixed w-full top-0 start-0 flex justify-between items-center transition-all`, 
         isScrolledTop ? 
         "shadow-none":
-        "shadow-xl")}>
+        "shadow-lg")}>
             <Image className=''
                 src="/innovare-logo.svg" 
                 alt="Innovare Logo"
