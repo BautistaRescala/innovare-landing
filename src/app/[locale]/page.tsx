@@ -2,12 +2,14 @@ import {useTranslations} from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Outfit } from "next/font/google";
 import { Link } from '@/i18n/routing';
-import { CircleStackIcon,CodeBracketIcon,BeakerIcon,CommandLineIcon,UserPlusIcon } from '@heroicons/react/24/outline';
+import HomePageCarousel from '@/components/HomePageCarousel';
+import { CircleStackIcon,CommandLineIcon,UserPlusIcon,ArrowRightIcon } from '@heroicons/react/24/outline';
 const contentfont = Outfit({subsets:['latin']})
 
 export default function HomePage({params: {locale}}:{params: {locale:string}}) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('HomePage');
+  
   return (
     <div>
       <div className="mt-20 bg-[url('/homepage1.jpg')] bg-contain bg-no-repeat bg-right">
@@ -23,7 +25,9 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
       </div>
       {/* Reviews */}
       <div>
-        <p>Hello World!</p>        
+        <div>
+
+        </div>      
       </div>
       {/* Servicios */}
       <div className="text-center">
@@ -46,8 +50,15 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
             <p className=" mt-5 px-8 mx-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel commodo neque, non ullamcorper augue. Proin risus justo, laoreet vitae rutrum a, aliquam non lacus. Vestibulum tristique elit tortor, id tincidunt nisi commodo non. Aliquam aliquam sit amet tellus a eleifen</p>
           </div>
       </div>
-      <div className={`${contentfont.className} text-end px-8`}>
-        <Link className="inline-block border-b-2 border-red-950 hover:text-red-700 pr-3" href="/services">Mas Información 🡒</Link>
+      <div className={`${contentfont.className} flex justify-center md:justify-end mt-3`}>
+        <div className="flex md:w-52 md:mx-24 hover:px-4 text-gray-800 hover:text-red-950 transition-all">
+          <Link href="/services">
+            <div className="flex flex-row justify-center items-center">
+              <p className="text-lg inline-block">Mas Información</p>
+              <ArrowRightIcon className="ml-2 w-5 h-5"></ArrowRightIcon>
+            </div>
+          </Link>
+        </div>
       </div>
       <div className=" h-[1280px]"></div>
     </div>

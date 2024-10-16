@@ -6,7 +6,7 @@ export default function SideNav({children,isOpen}:
     const t = useTranslations('Navigation');
     return(
         <div //style={{opacity: isOpen ? "1":"0"}}
-        className={clsx("fixed h-screen w-screen top-20 start-0 bg-white transition-all overscroll-none overflow-hidden",
+        className={clsx("fixed z-50 h-screen w-screen top-20 start-0 bg-white transition-all overscroll-none overflow-hidden",
             isOpen?
             "opacity-100 visible" :
             "opacity-0 invisible",
