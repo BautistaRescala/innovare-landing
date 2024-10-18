@@ -9,14 +9,13 @@ const contentfont = Outfit({subsets:['latin']})
 export default function HomePage({params: {locale}}:{params: {locale:string}}) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('HomePage');
-  
   return (
     <div>
-      <div className="mt-20 bg-[url('/homepage1.jpg')] bg-contain bg-no-repeat bg-right">
-        <div className="bg-gradient-to-r from-white to-transparent from-30% md:from-65% to-100%">
+      <div className="md:mt-20 mt-8 bg-[url('/homepage1.jpg')] bg-contain bg-no-repeat bg-right">
+        <div className="bg-gradient-to-r from-white to-transparent from-35% md:from-65% to-100%">
           <div className="bg-gradient-to-t from-white to-transparent from-5% to-100%">
             <div className='pl-10 pr-10 pb-48'>
-              <p className={`${contentfont.className} pt-16 max-w-[820px] text-5xl md:text-7xl`}
+              <p className={`${contentfont.className} pt-16 md:max-w-[820px] text-4xl md:text-7xl`}
               >{t.rich("applications",{br:() => <br></br>})}</p>
               <button className={`${contentfont.className} text-2xl border-b-4 relative top-12 left-2 border-red-950 hover:text-red-950 transition-all`}>Ponte en contacto</button>
             </div>
@@ -24,14 +23,10 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
         </div>
       </div>
       {/* Reviews */}
-      <div>
-        <div>
-
-        </div>      
-      </div>
+      <HomePageCarousel></HomePageCarousel>
       {/* Servicios */}
       <div className="text-center">
-        <p className={`${contentfont.className} text-center text-5xl font-normal mb-7 inline-block`}>Servicios Principales</p>
+        <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Servicios Principales</p>
       </div>
       <div className={`${contentfont.className} flex-col md:flex-row  flex justify-between`}>
         <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">

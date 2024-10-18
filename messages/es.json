@@ -19,5 +19,25 @@
   },
   "LoremIpsum":{
     "text":"lorem ipsum"
+  },
+  "Reviews":{
+    "astros":{
+      "name":"Astros",
+      "review":"Aplicativo exclusivo y privado para agencias de eventos sociales y registros de pasajeros y viajes",
+      "product":"AccessBand",
+      "logo":"/astros_logo.png"
+    },
+    "flecha":{
+      "name":"Flecha Estudiantil",
+      "review":"Aplicativo exclusivo y privado para agencias de eventos sociales y registros de pasajeros y viajes",
+      "product":"AccessBand",
+      "logo":"/astros_logo.png"
+    },
+    "freestyle":{
+      "name":"FreeStyle",
+      "review":"Aplicativo exclusivo y privado para agencias de eventos sociales y registros de pasajeros y viajes",
+      "product":"AccessBand",
+      "logo":"/astros_logo.png"
+    }
   }
 }
