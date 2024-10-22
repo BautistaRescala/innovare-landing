@@ -11,7 +11,7 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
   const t = useTranslations('HomePage');
   return (
     <div>
-      <div className="md:mt-20 mt-8 bg-[url('/homepage1.jpg')] bg-contain bg-no-repeat bg-right">
+      <div className="md:mt-20 mt-8 mb-24 bg-[url('/homepage1.jpg')] bg-contain bg-no-repeat bg-right">
         <div className="bg-gradient-to-r from-white to-transparent from-35% md:from-65% to-100%">
           <div className="bg-gradient-to-t from-white to-transparent from-5% to-100%">
             <div className='pl-10 pr-10 pb-48'>
@@ -22,8 +22,7 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
           </div>
         </div>
       </div>
-      {/* Reviews */}
-      <HomePageCarousel></HomePageCarousel>
+      {/* Middle section */}
       {/* Servicios */}
       <div className="text-center">
         <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Servicios Principales</p>
@@ -45,7 +44,7 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
             <p className=" mt-5 px-8 mx-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel commodo neque, non ullamcorper augue. Proin risus justo, laoreet vitae rutrum a, aliquam non lacus. Vestibulum tristique elit tortor, id tincidunt nisi commodo non. Aliquam aliquam sit amet tellus a eleifen</p>
           </div>
       </div>
-      <div className={`${contentfont.className} flex justify-center md:justify-end mt-3`}>
+      <div className={`${contentfont.className} flex justify-center md:justify-end mt-3 mb-24`}>
         <div className="flex md:w-52 md:mx-24 hover:px-4 text-gray-800 hover:text-red-950 transition-all">
           <Link href="/services">
             <div className="flex flex-row justify-center items-center">
@@ -55,8 +54,9 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
           </Link>
         </div>
       </div>
+      {/* Reviews */}
+      <HomePageCarousel></HomePageCarousel>
       <div className=" h-[1280px]"></div>
     </div>
-    
   );
 }

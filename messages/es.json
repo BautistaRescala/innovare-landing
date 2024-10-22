@@ -31,13 +31,43 @@
       "name":"Flecha Estudiantil",
       "review":"Aplicativo exclusivo y privado para agencias de eventos sociales y registros de pasajeros y viajes",
       "product":"AccessBand",
-      "logo":"/astros_logo.png"
+      "logo":"/flecha.png"
     },
     "freestyle":{
       "name":"FreeStyle",
       "review":"Aplicativo exclusivo y privado para agencias de eventos sociales y registros de pasajeros y viajes",
       "product":"AccessBand",
-      "logo":"/astros_logo.png"
+      "logo":"/freestyle.png"
+    },
+    "intercap":{
+      "name":"Intercap S.R.L.",
+      "review":"Aplicativo exclusivo y privado para agencias de eventos sociales y registros de pasajeros y viajes",
+      "product":"Comercio B2B de Distribución de Autopartes",
+      "logo":"/carrito.png"
+    },
+    "godoy":{
+      "name":"Godoy Poviña S.A.",
+      "review":"Se ponen en nuestros zapatos para solucionar nuestra falta de recursos.",
+      "product":"Software de Distribución",
+      "logo":"/godoy.png"
+    },
+    "crosseto":{
+      "name":"Ing.Crosetto SA",
+      "review":"Todo estuvo coordinado de manera excelente.",
+      "product":"Consultoría Tecnologica",
+      "logo":"/ing.png"
+    },
+    "escuelas":{
+      "name":"Escuelas y Colegios",
+      "review":"Donamos en época de pandemia durante 2 años plataforma educativa con éxito de uso",
+      "product":"Plataformas Educativas",
+      "logo":"/escuelas.jpg"
+    },
+    "soluciones":{
+      "name":"Soluciones Informáticas Integrales S.A.",
+      "review":"Ayudamos al staff IT de la empresa con el desarrollo de sus productos internos",
+      "product":"Desarrollo de sistemas internos",
+      "logo":"/soluciones.jpeg"
     }
   }
 }

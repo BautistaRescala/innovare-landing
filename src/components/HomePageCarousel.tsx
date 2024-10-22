@@ -5,6 +5,8 @@ import { Outfit } from "next/font/google";
 import Image from "next/image";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import messageData from "@/../messages/es.json"
+
 
 const contentfont = Outfit({subsets:['latin']})
 const responsive = {
@@ -19,7 +21,7 @@ const responsive = {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 1
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -30,9 +32,7 @@ const responsive = {
 
 export default function HomePageCarousel(){
     const reviews = useTranslations('Reviews');
-    const companies = ["astros","flecha","freestyle"]//corresponds to reviews section of messages
-
-
+    const companies = Object.keys(messageData.Reviews)
     function testCarouselItem(){
         const empresa = "astros";
         return(
@@ -57,29 +57,33 @@ export default function HomePageCarousel(){
             </div>      
         )
     }
-    
+
     return(
-        <div className="py-16">
-            <Carousel infinite={true}  removeArrowOnDeviceType={["tablet", "mobile"]} responsive={responsive}>
+        <div className="">
+            <Carousel className="py-4" infinite={true} autoPlay={true}  removeArrowOnDeviceType={["tablet", "mobile","desktop"]} responsive={responsive}>
             {
                 companies.map((c) => (
-                    <div key={c} className={`${contentfont.className} mx-4 w-[90w] md:w-96 p-4 border-transparent hover:border-gray-200 transition-all shadow-md border-2 rounded-md  `}>
+                    <div key={c} className={`${contentfont.className} mx-4 h-80 w-[90w] md:w-96 p-4 border-transparent hover:border-gray-200 transition-all shadow-md border-2 rounded-md flex justify-between flex-col  `}>
                         <div>
-                            <p className="font-bold text-lg">{reviews(`${c}.product`)}</p>
+                            <div>
+                                <p className="font-bold text-lg">{reviews(`${c}.product`)}</p>
+                            </div>
+                            <div className="pb-12 mt-6">
+                                <p className="font-light text-md">{reviews(`${c}.review`)}</p>
+                            </div>
                         </div>
-                        <div className="pb-12 mt-6">
-                            <p className="font-light text-md">{reviews(`${c}.review`)}</p>
-                        </div>
-                        <div className="flex flex-row justify-center p-2 items-center">
-                            <StarIcon className="size-5"></StarIcon>
-                            <StarIcon className="size-5"></StarIcon>
-                            <StarIcon className="size-5"></StarIcon>
-                            <StarIcon className="size-5"></StarIcon>
-                            <StarIcon className="size-5"></StarIcon>
-                        </div>
-                        <div className="flex items-center">
-                            <Image className="rounded-[50%]" alt="atros_logo" src={reviews(`${c}.logo`)} width={64} height={64}></Image>
-                            <p className="pl-5 text-md">{reviews(`${c}.name`)}</p>
+                        <div className="">
+                            <div className="flex flex-row justify-center p-2 items-center">
+                                <StarIcon className="size-5"></StarIcon>
+                                <StarIcon className="size-5"></StarIcon>
+                                <StarIcon className="size-5"></StarIcon>
+                                <StarIcon className="size-5"></StarIcon>
+                                <StarIcon className="size-5"></StarIcon>
+                            </div>
+                            <div className="flex items-center ">
+                                <Image className="rounded-[50%]" alt="company_logo" src={reviews(`${c}.logo`)} width={64} height={64}></Image>
+                                <p className="pl-5 text-md ">{reviews(`${c}.name`)}</p>
+                            </div>
                         </div>
                     </div> 
                 ))
