@@ -2,6 +2,7 @@ import {useTranslations} from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Outfit } from "next/font/google";
 import { Link } from '@/i18n/routing';
+import Image from 'next/image';
 import HomePageCarousel from '@/components/HomePageCarousel';
 import { CircleStackIcon,CommandLineIcon,UserPlusIcon,ArrowRightIcon } from '@heroicons/react/24/outline';
 const contentfont = Outfit({subsets:['latin']})
@@ -27,7 +28,7 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
       <div className="text-center">
         <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Servicios Principales</p>
       </div>
-      <div className={`${contentfont.className} flex-col md:flex-row  flex justify-between`}>
+      <div className={`${contentfont.className} flex-col md:flex-row flex justify-between`}>
         <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
             <CommandLineIcon className="size-14 mb-1 text-orange-600"></CommandLineIcon>
             <p className='font-semibold text-3xl '>Desarrollo de Aplicaciones</p>
@@ -56,7 +57,48 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
       </div>
       {/* Reviews */}
       <HomePageCarousel></HomePageCarousel>
-      <div className=" h-[1280px]"></div>
+      <footer className="mt-24 mb-8 flex items-center flex-col h-80">
+        <div className="border-zinc-200 border-b-2 w-[75%] mb-8"></div>
+        <div className="">
+          <Link href={"https://www.designrush.com/agency/profile/innovare-software-srl"}>
+            <Image className="w-[192px] h-auto" quality={100} src="/clutch.png" alt="clutch logo" height={500} width={900}></Image>
+          </Link>
+        </div>
+        <div>
+          <ul className="flex flex-row justify-around w-96">
+            <li>
+              <Link href={"https://www.instagram.com/innovaresoftwaresrl/"}>
+                <Image src={"/instagram_logo.svg"} alt="instagram logo" width={20} height={20}></Image>
+              </Link>
+            </li>
+            <li>
+              <Link href={"https://www.facebook.com/innovaresoftsrl/"}>
+                <Image src={"/facebook_logo.svg"} alt="facebook logo" width={20} height={20}></Image>
+              </Link>
+            </li>
+            <li>
+              <Link href={"https://twitter.com/InnovareSoftwa1"}>
+                <Image src={"/x_logo.svg"} alt="twitter logo" width={20} height={20}></Image>
+              </Link>
+            </li>
+            <li>
+              <Link href={"https://www.linkedin.com/company/innovaresoftware/"}>
+                <Image src={"/linkedin_logo.svg"} alt="linkedin logo" width={20} height={20}></Image>
+              </Link>
+            </li>
+            <li>
+              <Link href={"https://www.youtube.com/@innovaresoftwaresrl"}>
+                <Image src={"/youtube_logo.svg"} alt="youtube logo" width={20} height={20}></Image>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="flex flex-col items-center pt-4">
+          <p className="pb-2">Habegger 1336 | Reconquista Santa Fe 3560 - Argentina</p>
+          <p className="pb-2">Office: +54 3482 433287 | Email: info@innovare.com.ar</p>
+          <p className="pb-2 font-bold">Copyright by 2024 Innovare Software SRL</p>
+        </div>
+      </footer>
     </div>
   );
 }
