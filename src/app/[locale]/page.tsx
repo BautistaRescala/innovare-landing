@@ -104,6 +104,9 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
           </div>
         </div>
       </div>
+      <div className="text-center">
+          <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Testimonios</p>
+        </div>
       {/* Reviews */}
       <HomePageCarousel></HomePageCarousel>
       {/* Footer */}
