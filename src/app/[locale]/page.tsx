@@ -34,17 +34,17 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
         <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
             <CommandLineIcon className="size-14 mb-1 text-orange-600"></CommandLineIcon>
             <p className='font-semibold text-3xl '>Desarrollo de Aplicaciones</p>
-            <p className=" mt-5 px-8 mx-4">Desarrollamos aplicaciones a nivel experto que se encajan a las necesidades de tu empresa. Nos integramos de manera facil y comoda a los sistemas de tu empresa para que obtengas los mejores resultados para tus requisitos.</p>
+            <p className=" mt-5 px-8 mx-4 text-lg">Desarrollamos aplicaciones a nivel experto que se encajan a las necesidades de tu empresa. Nos integramos de manera facil y comoda a los sistemas de tu empresa para que obtengas los mejores resultados para tus requisitos.</p>
           </div>
           <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
             <UserPlusIcon className="size-14 mb-1 text-green-600"></UserPlusIcon>
             <p className='font-semibold text-3xl '>Staff Augmentation</p>
-            <p className=" mt-5 px-8 mx-4">Staff augmentation is a flexible outsourcing strategy that allows companies to hire temporary skilled professionals to fill gaps in expertise or meet project demands. This approach enables quick scaling of the workforce while integrating contractors into existing teams, enhancing productivity without long-term commitments.</p>
+            <p className=" mt-5 px-8 mx-4 text-lg">Incorpore a su staff un equipo de profesionales dedicados y entrenados con la máxima innovación. Le proveemos las herramientas a tu empresa para impulsar tu desarrollo sin comprometer tu estructura a largo plazo.</p>
           </div>
           <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
             <CircleStackIcon className="size-14 mb-1 text-blue-700"></CircleStackIcon>
             <p className='font-semibold text-3xl '>Gestión de Base de datos</p>
-            <p className=" mt-5 px-8 mx-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel commodo neque, non ullamcorper augue. Proin risus justo, laoreet vitae rutrum a, aliquam non lacus. Vestibulum tristique elit tortor, id tincidunt nisi commodo non. Aliquam aliquam sit amet tellus a eleifen</p>
+            <p className=" mt-5 px-8 mx-4 text-lg">Simplificamos el analisis y manejo de estructuras complejas de datos. Aseguramos la seguridad, integridad y optimizacion de tus sistemas para mantener el apto funcionamiento de tus servicios.</p>
           </div>
       </div>
       <div className={`${contentfont.className} flex justify-center md:justify-end mt-3 mb-24`}>
@@ -70,7 +70,7 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
         </div>
         <div className="flex flex-row items-center justify-center">
           <div className="hidden md:block">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/m4_09h7uFRg?autoplay=1&mute=1&loop=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/m4_09h7uFRg?autoplay=1&mute=1&loop=1&playlist=m4_09h7uFRg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
           </div>
           <div className={`${contentfont.className} md:ml-16  h-[315px] md:w-96 w-[85%]  flex flex-col justify-between`}>
               <div className="flex flex-row">  
