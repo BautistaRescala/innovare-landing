@@ -4,7 +4,8 @@ import { Outfit } from "next/font/google";
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import HomePageCarousel from '@/components/HomePageCarousel';
-import { CircleStackIcon,CommandLineIcon,UserPlusIcon,ArrowRightIcon } from '@heroicons/react/24/outline';
+import { CircleStackIcon,CommandLineIcon,UserPlusIcon,ArrowRightIcon,ChatBubbleLeftRightIcon,ArrowsRightLeftIcon,CalendarDaysIcon } from '@heroicons/react/24/outline';
+import ScrollButton from '@/components/ScrollButton';
 const contentfont = Outfit({subsets:['latin']})
 
 export default function HomePage({params: {locale}}:{params: {locale:string}}) {
@@ -18,7 +19,8 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
             <div className='pl-10 pr-10 pb-48'>
               <p className={`${contentfont.className} pt-16 md:max-w-[820px] text-4xl md:text-7xl`}
               >{t.rich("applications",{br:() => <br></br>})}</p>
-              <button className={`${contentfont.className} text-2xl border-b-4 relative top-12 left-2 border-red-950 hover:text-red-950 transition-all`}>Ponte en contacto</button>
+              {/* <button className={`${contentfont.className} text-2xl border-b-4 relative top-12 left-2 border-red-950 hover:text-red-950 transition-all`}>Ponte en contacto</button> */}
+              <ScrollButton></ScrollButton>
             </div>
           </div>
         </div>
@@ -32,7 +34,7 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
         <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
             <CommandLineIcon className="size-14 mb-1 text-orange-600"></CommandLineIcon>
             <p className='font-semibold text-3xl '>Desarrollo de Aplicaciones</p>
-            <p className=" mt-5 px-8 mx-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel commodo neque, non ullamcorper augue. Proin risus justo, laoreet vitae rutrum a, aliquam non lacus. Vestibulum tristique elit tortor, id tincidunt nisi commodo non. Aliquam aliquam sit amet tellus a eleifen</p>
+            <p className=" mt-5 px-8 mx-4">Desarrollamos aplicaciones a nivel experto que se encajan a las necesidades de tu empresa. Nos integramos de manera facil y comoda a los sistemas de tu empresa para que obtengas los mejores resultados para tus requisitos.</p>
           </div>
           <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
             <UserPlusIcon className="size-14 mb-1 text-green-600"></UserPlusIcon>
@@ -55,8 +57,56 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
           </Link>
         </div>
       </div>
+      {/* Productos */}
+      <div className="mb-24">
+        <div className="text-center">
+          <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Nuestros Productos</p>
+        </div>
+        <div className="flex items-center justify-center">
+          <Image src={"/accessband.png"} alt="accessband logo" height={154} width={154}></Image>
+        </div>
+        <div className="text-center">
+          <p className={`${contentfont.className} text-center text-4xl font-extralight mx-4 mb-7 inline-block text-sky-950`}>Red social y controles de accessos privados</p>
+        </div>
+        <div className="flex flex-row items-center justify-center">
+          <div className="hidden md:block">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/m4_09h7uFRg?autoplay=1&mute=1&loop=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+          </div>
+          <div className={`${contentfont.className} md:ml-16  h-[315px] md:w-96 w-[85%]  flex flex-col justify-between`}>
+              <div className="flex flex-row">  
+                <div>
+                  <ChatBubbleLeftRightIcon className="h-[85px] mx-1 text-cyan-950"></ChatBubbleLeftRightIcon>
+                </div>
+                <div>
+                  <p className="font-bold text-lg text-slate-900">Social</p>
+                  <p className="font-light text-md">Fotos, videos y comentarios de viajes para grupos privados de pasajeros y familiares.</p> 
+                </div>
+              </div>
+              <div className="flex flex-row">
+                <div>
+                  <ArrowsRightLeftIcon className="h-[85px] mx-1 text-cyan-950"></ArrowsRightLeftIcon>
+                </div>
+                <div>
+                  <p className="font-bold text-lg text-slate-900">Seguimiento</p>
+                  <p className="font-light text-md">Control de accesos NFC y QR con Fichas de datos individuales autogestionadas.</p>
+                </div>
+              </div>
+              <div className="flex flex-row ">
+                <div>
+                  <CalendarDaysIcon className="h-[85px] mx-1 text-cyan-950"></CalendarDaysIcon>
+                </div>
+                <div>
+                  <p className="font-bold text-lg text-slate-900">Organizacion de Eventos</p>
+                  <p className="font-light text-md">Facil seguimiento de itinerarios con una interfaz simplificada</p>
+                </div>
+              </div>
+              
+          </div>
+        </div>
+      </div>
       {/* Reviews */}
       <HomePageCarousel></HomePageCarousel>
+      {/* Footer */}
       <footer className="mt-24 mb-8 flex items-center flex-col h-80">
         <div className="border-zinc-200 border-b-2 w-[75%] mb-8"></div>
         <div className="">
@@ -93,7 +143,7 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col items-center pt-4">
+        <div className="flex flex-col items-center pt-4 text-center">
           <p className="pb-2">Habegger 1336 | Reconquista Santa Fe 3560 - Argentina</p>
           <p className="pb-2">Office: +54 3482 433287 | Email: info@innovare.com.ar</p>
           <p className="pb-2 font-bold">Copyright by 2024 Innovare Software SRL</p>
