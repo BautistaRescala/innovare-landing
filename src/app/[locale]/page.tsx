@@ -6,6 +6,7 @@ import Image from 'next/image';
 import HomePageCarousel from '@/components/HomePageCarousel';
 import { CircleStackIcon,CommandLineIcon,UserPlusIcon,ArrowRightIcon,ChatBubbleLeftRightIcon,ArrowsRightLeftIcon,CalendarDaysIcon } from '@heroicons/react/24/outline';
 import ScrollButton from '@/components/ScrollButton';
+import HomePageTab from '@/components/HomePageTab';
 const contentfont = Outfit({subsets:['latin']})
 
 export default function HomePage({params: {locale}}:{params: {locale:string}}) {
@@ -14,12 +15,11 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
   return (
     <div>
       <div className="md:mt-20 mt-8 mb-24 bg-[url('/homepage1.jpg')] bg-contain bg-no-repeat bg-right">
-        <div className="bg-gradient-to-r from-white to-transparent from-35% md:from-65% to-100%">
+        <div className="bg-gradient-to-r from-white to-transparent from-55% md:from-65% to-100%">
           <div className="bg-gradient-to-t from-white to-transparent from-5% to-100%">
             <div className='pl-10 pr-10 pb-48'>
               <p className={`${contentfont.className} pt-16 md:max-w-[820px] text-4xl md:text-7xl`}
               >{t.rich("applications",{br:() => <br></br>})}</p>
-              {/* <button className={`${contentfont.className} text-2xl border-b-4 relative top-12 left-2 border-red-950 hover:text-red-950 transition-all`}>Ponte en contacto</button> */}
               <ScrollButton></ScrollButton>
             </div>
           </div>
@@ -56,6 +56,10 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
             </div>
           </Link>
         </div>
+      </div>
+      {/* Tecnologies */}
+      <div>
+        <HomePageTab></HomePageTab>
       </div>
       {/* Productos */}
       <div className="mb-24">
