@@ -1,15 +1,15 @@
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Outfit } from "next/font/google";
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import HomePageCarousel from '@/components/HomePageCarousel';
-import { CircleStackIcon,CommandLineIcon,UserPlusIcon,ArrowRightIcon,ChatBubbleLeftRightIcon,ArrowsRightLeftIcon,CalendarDaysIcon } from '@heroicons/react/24/outline';
+import { CircleStackIcon, CommandLineIcon, UserPlusIcon, ArrowRightIcon, ChatBubbleLeftRightIcon, ArrowsRightLeftIcon, CalendarDaysIcon } from '@heroicons/react/24/outline';
 import ScrollButton from '@/components/ScrollButton';
 import HomePageTab from '@/components/HomePageTab';
-const contentfont = Outfit({subsets:['latin']})
+const contentfont = Outfit({ subsets: ['latin'] })
 
-export default function HomePage({params: {locale}}:{params: {locale:string}}) {
+export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('HomePage');
   return (
@@ -19,7 +19,7 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
           <div className="bg-gradient-to-t from-white to-transparent from-5% to-100%">
             <div className='pl-10 pr-10 pb-48'>
               <p className={`${contentfont.className} pt-16 md:max-w-[820px] text-4xl md:text-7xl`}
-              >{t.rich("applications",{br:() => <br></br>})}</p>
+              >{t.rich("applications", { br: () => <br></br> })}</p>
               <ScrollButton></ScrollButton>
             </div>
           </div>
@@ -32,20 +32,20 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
       </div>
       <div className={`${contentfont.className} flex-col md:flex-row flex justify-between`}>
         <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
-            <CommandLineIcon className="size-14 mb-1 text-orange-600"></CommandLineIcon>
-            <p className='font-semibold text-3xl '>Desarrollo de Aplicaciones</p>
-            <p className=" mt-5 px-8 mx-4 text-lg">Desarrollamos aplicaciones a nivel experto que se encajan a las necesidades de tu empresa. Nos integramos de manera facil y comoda a los sistemas de tu empresa para que obtengas los mejores resultados para tus requisitos.</p>
-          </div>
-          <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
-            <UserPlusIcon className="size-14 mb-1 text-green-600"></UserPlusIcon>
-            <p className='font-semibold text-3xl '>Staff Augmentation</p>
-            <p className=" mt-5 px-8 mx-4 text-lg">Incorpore a su staff un equipo de profesionales dedicados y entrenados con la máxima innovación. Le proveemos las herramientas a tu empresa para impulsar tu desarrollo sin comprometer tu estructura a largo plazo.</p>
-          </div>
-          <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
-            <CircleStackIcon className="size-14 mb-1 text-blue-700"></CircleStackIcon>
-            <p className='font-semibold text-3xl '>Gestión de Base de datos</p>
-            <p className=" mt-5 px-8 mx-4 text-lg">Simplificamos el analisis y manejo de estructuras complejas de datos. Aseguramos la seguridad, integridad y optimizacion de tus sistemas para mantener el apto funcionamiento de tus servicios.</p>
-          </div>
+          <CommandLineIcon className="size-14 mb-1 text-orange-600"></CommandLineIcon>
+          <p className='font-semibold text-3xl '>Desarrollo de Aplicaciones</p>
+          <p className=" mt-5 px-8 mx-4 text-lg">Desarrollamos aplicaciones a nivel experto que se encajan a las necesidades de tu empresa. Nos integramos de manera facil y comoda a los sistemas de tu empresa para que obtengas los mejores resultados para tus requisitos.</p>
+        </div>
+        <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
+          <UserPlusIcon className="size-14 mb-1 text-green-600"></UserPlusIcon>
+          <p className='font-semibold text-3xl '>Staff Augmentation</p>
+          <p className=" mt-5 px-8 mx-4 text-lg">Incorpore a su staff un equipo de profesionales dedicados y entrenados con la máxima innovación. Le proveemos las herramientas a tu empresa para impulsar tu desarrollo sin comprometer tu estructura a largo plazo.</p>
+        </div>
+        <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
+          <CircleStackIcon className="size-14 mb-1 text-blue-700"></CircleStackIcon>
+          <p className='font-semibold text-3xl '>Gestión de Base de datos</p>
+          <p className=" mt-5 px-8 mx-4 text-lg">Simplificamos el analisis y manejo de estructuras complejas de datos. Aseguramos la seguridad, integridad y optimizacion de tus sistemas para mantener el apto funcionamiento de tus servicios.</p>
+        </div>
       </div>
       <div className={`${contentfont.className} flex justify-center md:justify-end mt-3 mb-24`}>
         <div className="flex md:w-52 md:mx-24 hover:px-4 text-gray-800 hover:text-red-950 transition-all">
@@ -58,7 +58,10 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
         </div>
       </div>
       {/* Tecnologies */}
-      <div>
+      <div className="mb-24">
+        <div className="text-center">
+          <p className={`${contentfont.className} text-center text-2xl font-normal mx-4 mb-7 inline-block`}>Tecnologias</p>
+        </div>
         <HomePageTab></HomePageTab>
       </div>
       {/* Productos */}
@@ -77,40 +80,40 @@ export default function HomePage({params: {locale}}:{params: {locale:string}}) {
             <iframe width="560" height="315" src="https://www.youtube.com/embed/m4_09h7uFRg?autoplay=1&mute=1&loop=1&playlist=m4_09h7uFRg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
           </div>
           <div className={`${contentfont.className} md:ml-16  h-[315px] md:w-96 w-[85%]  flex flex-col justify-between`}>
-              <div className="flex flex-row">  
-                <div>
-                  <ChatBubbleLeftRightIcon className="h-[85px] mx-1 text-cyan-950"></ChatBubbleLeftRightIcon>
-                </div>
-                <div>
-                  <p className="font-bold text-lg text-slate-900">Social</p>
-                  <p className="font-light text-md">Fotos, videos y comentarios de viajes para grupos privados de pasajeros y familiares.</p> 
-                </div>
+            <div className="flex flex-row">
+              <div>
+                <ChatBubbleLeftRightIcon className="h-[85px] mx-1 text-cyan-950"></ChatBubbleLeftRightIcon>
               </div>
-              <div className="flex flex-row">
-                <div>
-                  <ArrowsRightLeftIcon className="h-[85px] mx-1 text-cyan-950"></ArrowsRightLeftIcon>
-                </div>
-                <div>
-                  <p className="font-bold text-lg text-slate-900">Seguimiento</p>
-                  <p className="font-light text-md">Control de accesos NFC y QR con Fichas de datos individuales autogestionadas.</p>
-                </div>
+              <div>
+                <p className="font-bold text-lg text-slate-900">Social</p>
+                <p className="font-light text-md">Fotos, videos y comentarios de viajes para grupos privados de pasajeros y familiares.</p>
               </div>
-              <div className="flex flex-row ">
-                <div>
-                  <CalendarDaysIcon className="h-[85px] mx-1 text-cyan-950"></CalendarDaysIcon>
-                </div>
-                <div>
-                  <p className="font-bold text-lg text-slate-900">Organizacion de Eventos</p>
-                  <p className="font-light text-md">Facil seguimiento de itinerarios con una interfaz simplificada</p>
-                </div>
+            </div>
+            <div className="flex flex-row">
+              <div>
+                <ArrowsRightLeftIcon className="h-[85px] mx-1 text-cyan-950"></ArrowsRightLeftIcon>
               </div>
-              
+              <div>
+                <p className="font-bold text-lg text-slate-900">Seguimiento</p>
+                <p className="font-light text-md">Control de accesos NFC y QR con Fichas de datos individuales autogestionadas.</p>
+              </div>
+            </div>
+            <div className="flex flex-row ">
+              <div>
+                <CalendarDaysIcon className="h-[85px] mx-1 text-cyan-950"></CalendarDaysIcon>
+              </div>
+              <div>
+                <p className="font-bold text-lg text-slate-900">Organizacion de Eventos</p>
+                <p className="font-light text-md">Facil seguimiento de itinerarios con una interfaz simplificada</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
       <div className="text-center">
-          <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Testimonios</p>
-        </div>
+        <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Testimonios</p>
+      </div>
       {/* Reviews */}
       <HomePageCarousel></HomePageCarousel>
       {/* Footer */}
