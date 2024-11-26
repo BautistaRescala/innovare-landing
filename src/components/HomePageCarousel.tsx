@@ -63,7 +63,7 @@ export default function HomePageCarousel(){
             <Carousel className="py-4" infinite={true} autoPlay={true}  removeArrowOnDeviceType={["tablet", "mobile","desktop"]} responsive={responsive}>
             {
                 companies.map((c) => (
-                    <div key={c} className={`${contentfont.className} mx-4 h-80 w-[90w] md:w-96 p-4 border-transparent hover:border-gray-200 transition-all shadow-md border-2 rounded-md flex justify-between flex-col  `}>
+                    <div key={c} className={`${contentfont.className} mx-4 h-80 w-[90w] md:w-96 p-4 border-gray-100 hover:border-gray-300 transition-all shadow-md border-2 rounded-md flex justify-between flex-col  `}>
                         <div>
                             <div>
                                 <p className="font-bold text-lg">{reviews(`${c}.product`)}</p>

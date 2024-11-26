@@ -1,13 +1,15 @@
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { Outfit } from "next/font/google";
+import { Outfit, Quicksand } from "next/font/google";
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import HomePageCarousel from '@/components/HomePageCarousel';
-import { CircleStackIcon, CommandLineIcon, UserPlusIcon, ArrowRightIcon, ChatBubbleLeftRightIcon, ArrowsRightLeftIcon, CalendarDaysIcon } from '@heroicons/react/24/outline';
+import { CircleStackIcon, CommandLineIcon, UserPlusIcon, ArrowRightIcon, ChatBubbleLeftRightIcon, ArrowsRightLeftIcon, CalendarDaysIcon, BookOpenIcon } from '@heroicons/react/24/outline';
 import ScrollButton from '@/components/ScrollButton';
 import HomePageTab from '@/components/HomePageTab';
+import PictureShowcase from '@/components/PictureShowcase';
 const contentfont = Outfit({ subsets: ['latin'] })
+const suitefont = Quicksand({ subsets: ['latin'] })
 
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale);
@@ -65,10 +67,10 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         <HomePageTab></HomePageTab>
       </div>
       {/* Productos */}
-      <div className="mb-24">
-        <div className="text-center">
+      <div className="text-center">
           <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Nuestros Productos</p>
         </div>
+      <div className="mb-24">
         <div className="flex items-center justify-center">
           <Image src={"/accessband.png"} alt="accessband logo" height={154} width={154}></Image>
         </div>
@@ -107,17 +109,48 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 <p className="font-light text-md">Facil seguimiento de itinerarios con una interfaz simplificada</p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
+      {/* innovare suite */}
+      <div className="flex justify-center items-center mb-24">
+        <div className="bg-neutral-200 max-w-[1020px] rounded-lg shadow-lg">
+          <div className="h-auto p-4 bg-white border-neutral-200 border-2 rounded-t-lg flex flex-col justify-center items-center">
+            <Image src="innovare_raw.svg" alt="innovare suite logo" width={114} height={114} className="h-20 w-auto"></Image>
+            <p className={`${suitefont.className} font-bold text-lg`}>Innovare Suite</p>
+          </div>
+
+          <div className={`${contentfont.className} flex flex-row`}>
+            <div className="flex items-center flex-col bg-white font-normal text-lg w-[50%] rounded-sm shadow-md h-[410px] p-8 m-6">
+              <div className="h-20 w-full flex items-center justify-center mb-5">
+                <BookOpenIcon className="h-full w-full text-gray-700"></BookOpenIcon>
+              </div>
+              <p className=" text-justify  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vitae, praesentium dolores ipsum aperiam, dolor quam recusandae eius suscipit corporis illum voluptatem molestias nihil, tempora quod aspernatur at sint aut.</p>
+              <div className="w-full h-full text-red-950  flex justify-end items-end p-4 font-light">
+                <Link href="https://www.innovaresuite.com/#/" className="opacity-70 hover:opacity-100">Mas Informacion ↗</Link>
+              </div>
+            </div>
+            <div className="w-[50%] m-6 flex justify-between items-center flex-col">
+              <div className="mt-4 w-[80%] h-16 flex justify-center items-center rounded-sm shadow-lg text-center bg-white">
+                <p className="bg-gradient-to-br from-red-700 from-5% via-red-950 to-99% to-red-400 bg-clip-text text-transparent text-xl">
+                  Nuestros cursos de capacitacion
+                </p>
+              </div>
+              <div className="mb-1">
+                <PictureShowcase></PictureShowcase>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Reviews */}
       <div className="text-center">
         <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Testimonios</p>
       </div>
-      {/* Reviews */}
+      <div className="h-[2px] bg-gradient-to-r from-white via-gray-300 to-white from-30% to-70% mb-8"></div>
       <HomePageCarousel></HomePageCarousel>
       {/* Footer */}
-      <footer className="mt-24 mb-8 flex items-center flex-col h-80">
+      <footer className="mt-16 mb-8 flex items-center flex-col h-80">
         <div className="border-zinc-200 border-b-2 w-[75%] mb-8"></div>
         <div className="">
           <Link href={"https://www.designrush.com/agency/profile/innovare-software-srl"}>

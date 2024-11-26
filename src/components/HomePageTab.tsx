@@ -21,7 +21,7 @@ export default function HomePageTab() {
                         <p className="px-2 hidden md:block">Lenguajes de programacion</p>
                     </div>
                 </button>
-                <button type="button" onClick={() => setActiveIndex(2)} className={clsx("basis-0 h-fit grow font-semibold pb-[2px]", activeIndex === 2 ? "bg-red-950" : "bg-slate-500")}>
+                <button type="button" onClick={() => setActiveIndex(2)} className={clsx(" transition-all basis-0 h-fit grow font-semibold pb-[2px]", activeIndex === 2 ? "bg-red-950" : "bg-slate-500")}>
                     <div className={clsx("justify-center items-center flex w-full h-full text-black p-2", activeIndex === 2 ? "bg-gradient-to-t from-slate-200 from-10% to-white" : "bg-white")}>
                         <CircleStackIcon className="md:w-6 md:h-6 h-8 w-8"></CircleStackIcon>
                         <p className="px-2 hidden md:block">Data</p>
