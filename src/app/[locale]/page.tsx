@@ -153,7 +153,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       <footer className="mt-16 mb-8 flex items-center flex-col h-80">
         <div className="border-zinc-200 border-b-2 w-[75%] mb-8"></div>
         <div className="">
-          <Link href={"https://www.designrush.com/agency/profile/innovare-software-srl"}>
+          <Link href={"https://clutch.co/profile/innovare-software-agency#highlights"}>
             <Image className="w-[192px] h-auto" quality={100} src="/clutch.png" alt="clutch logo" height={500} width={900}></Image>
           </Link>
         </div>

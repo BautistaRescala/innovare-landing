@@ -20,7 +20,7 @@ export default function TopNav({children}:{children: React.ReactNode;}){
 
     if(typeof window !== "undefined"){
         window.addEventListener("scroll",handleScroll)
-    }
+    }//this is bad. should be replaced with useEffect
 
     return(
         <div className={clsx(`bg-white z-50
