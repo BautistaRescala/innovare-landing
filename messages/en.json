@@ -1,22 +1,73 @@
 {
-  "Navigation":{
-    "navigation":"Navigation",
-    "home":"Home",
-    "about":"About"
+  "Navigation": {
+    "navigation": "Navigation",
+    "home": "Home",
+    "about": "About us",
+    "services": "Services"
   },
   "HomePage": {
-    "innovare":"Innovare Software SRL",
-    "staff":"Professional Staff Augmentation",
-    "applications":"Efficient and scalable custom applications. Reduce your costs with our development team."
+    "innovare": "Innovare Software SRL",
+    "staff": "Staff Augmentation Professional",
+    "applications": "Customized, efficient, and scalable applications with a tailor-made team."
   },
-  "About":{
-    "text":"This is the about page"
+  "About": {
+    "text": "This is the about page"
   },
-  "LocaleSwitcher":{
-    "label": "Language Selector",
+  "LocaleSwitcher": {
+    "label": "Languaje Selector",
     "locale": "{locale, select, en {EN} es {ES} other {Unknown}}"
   },
-  "LoremIpsum":{
-    "text":"lorem ipsum"
+  "LoremIpsum": {
+    "text": "lorem ipsum"
+  },
+  "Reviews": {
+    "astros": {
+      "name": "Astros",
+      "review": "Exclusive and private application for social event agencies and passenger and travel records",
+      "product": "AccessBand",
+      "logo": "/astros_logo.png"
+    },
+    "flecha": {
+      "name": "Flecha Estudiantil",
+      "review": "Exclusive and private application for social event agencies and passenger and travel records",
+      "product": "AccessBand",
+      "logo": "/flecha.png"
+    },
+    "freestyle": {
+      "name": "FreeStyle",
+      "review": "Exclusive and private application for social event agencies and passenger and travel records",
+      "product": "AccessBand",
+      "logo": "/freestyle.png"
+    },
+    "intercap": {
+      "name": "Intercap S.R.L.",
+      "review": "Exclusive and private application for social event agencies and passenger and travel records",
+      "product": "B2B Auto Parts Distribution Business",
+      "logo": "/carrito.png"
+    },
+    "godoy": {
+      "name": "Godoy Poviña S.A.",
+      "review": "They put themselves in our shoes to solve our lack of resources.",
+      "product": "Distribution Software",
+      "logo": "/godoy.png"
+    },
+    "crosseto": {
+      "name": "Ing.Crosetto SA",
+      "review": "Everything was coordinated excellently.",
+      "product": "Technology Consulting",
+      "logo": "/ing.png"
+    },
+    "escuelas": {
+      "name": "Schools and Colleges",
+      "review": "We donated an educational platform during the pandemic for two years, with successful results",
+      "product": "Educational Platforms",
+      "logo": "/escuelas.jpg"
+    },
+    "soluciones": {
+      "name": "Soluciones Informáticas Integrales S.A.",
+      "review": "We assisted the company's IT staff with the development of their internal products",
+      "product": "Development of internal systems",
+      "logo": "/soluciones.jpeg"
+    }
   }
 }
