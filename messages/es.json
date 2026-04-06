@@ -8,8 +8,39 @@
   "HomePage": {
     "innovare":"Innovare Software SRL",
     "staff":"Staff Augmentation Professional",
-    "applications":"Aplicaciones personalizadas, eficientes y escalables con un equipo a medida."
+    "applications":"Aplicaciones personalizadas, eficientes y escalables con un equipo a medida.",
+    "DevTitle":"Desarrollo de Aplicaciones",
+    "Dev":"Desarrollamos aplicaciones a nivel experto que se encajan a las necesidades de tu empresa. Nos integramos de manera facil y comoda a los sistemas de tu empresa para que obtengas los mejores resultados para tus requisitos.",
+    "StaffTitle":"Staff Augmentation",
+    "StaffCont":"Incorpore a su staff un equipo de profesionales dedicados y entrenados con la máxima innovación. Le proveemos las herramientas a tu empresa para impulsar tu desarrollo sin comprometer tu estructura a largo plazo.",
+    "DataTitle":"Gestión de Base de datos",
+    "Data":"Simplificamos el analisis y manejo de estructuras complejas de datos. Aseguramos la seguridad, integridad y optimizacion de tus sistemas para mantener el apto funcionamiento de tus servicios.",
+    "Tech":"Tecnologias",
+    "Products":"Nuestros Productos",
+    "mInfo":"Mas Información"
   },
+  "Tabs":{
+    "Lang":"Lenguajes de Programación"
+  }
+  ,
+  "Products":{
+    "Access":{
+      "Title":"Red social y controles de accessos privados",
+      "Subtitle1":"Social",
+      "Cont1":"Fotos, videos y comentarios de viajes para grupos privados de pasajeros y familiares.",
+      "Subtitle2":"Seguimiento",
+      "Cont2":"Control de accesos NFC y QR con Fichas de datos individuales autogestionadas.",
+      "Subtitle3":"Organizacion de Eventos",
+      "Cont3":"Facil seguimiento de itinerarios con una interfaz simplificada"
+    },
+    "Suite":{
+      "Paragraph":"Explora nuestros cursos diseñados con enseñanzas formuladas de años de experiencia profesional en el campo de la programación. Recibe la guía personalizada de veteranos expertos y profundiza tu conocimiento de una variedad de tecnologías.",
+      "Subtitle":"Nuestros cursos",
+      "Info":"Mas Informacion ↗",
+      "Test":"Testimonios"
+    }
+  }
+  ,
   "About":{
     "text":"Esta es la about page"
   },

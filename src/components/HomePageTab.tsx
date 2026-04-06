@@ -1,4 +1,5 @@
 'use client';
+import {useTranslations} from 'next-intl';
 import clsx from "clsx";
 import { useState } from "react";
 import Image from "next/image";
@@ -7,7 +8,9 @@ import { CodeBracketIcon,CircleStackIcon,PuzzlePieceIcon } from "@heroicons/reac
 const contentfont = Outfit({ subsets: ['latin'] })
 
 
+
 export default function HomePageTab() {
+    const t = useTranslations('Tabs')
     const [activeIndex, setActiveIndex] = useState(1)
     const logos = ["cplusplus-logo.svg", "csharp-logo.png", "js-logo.png","typescript-logo.svg","golang-logo.svg","java-logo.svg", "kotlin-logo.svg", "swift-logo.svg"]
     const frameLogos = ["angular-logo.svg","react-logo.svg","loopback-logo.svg","nestjs-logo.svg","net-logo.svg","nextjs-logo.svg","nodejs-logo.svg","tensorflow_logo.svg"]
@@ -18,7 +21,7 @@ export default function HomePageTab() {
                 <button type="button" onClick={() => setActiveIndex(1)} className={clsx("basis-0 h-fit grow font-semibold pb-[2px]", activeIndex === 1 ? "bg-red-950" : "bg-slate-500")}>
                     <div className={clsx("justify-center items-center flex w-full h-full text-black p-2", activeIndex === 1 ? "bg-gradient-to-t from-slate-200 from-10% to-white" : "bg-white")}>
                         <CodeBracketIcon className="md:w-6 md:h-6 h-8 w-8"></CodeBracketIcon>
-                        <p className="px-2 hidden md:block">Lenguajes de programacion</p>
+                        <p className="px-2 hidden md:block">{t('Lang')}</p>
                     </div>
                 </button>
                 <button type="button" onClick={() => setActiveIndex(2)} className={clsx(" transition-all basis-0 h-fit grow font-semibold pb-[2px]", activeIndex === 2 ? "bg-red-950" : "bg-slate-500")}>

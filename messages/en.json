@@ -8,8 +8,38 @@
   "HomePage": {
     "innovare": "Innovare Software SRL",
     "staff": "Staff Augmentation Professional",
-    "applications": "Customized, efficient, and scalable applications with a tailor-made team."
+    "applications": "Customized, efficient, and scalable applications with a tailor-made team.",
+    "DevTitle":"Application Development",
+    "Dev":"We develop applications at an expert level that fit your company's needs. We integrate easily and seamlessly with your company's systems so you can achieve the best results for your requirements.",
+    "StaffTitle":"Staff Augmentation",
+    "StaffCont":"Add a team of dedicated and highly trained professionals to your staff, driven by cutting-edge innovation. We provide your company with the tools to boost your growth without compromising your long-term structure.",
+    "DataTitle":"Database Management",
+    "Data":"We simplify the analysis and management of complex data structures. We ensure the security, integrity, and optimization of your systems to maintain the proper functioning of your services.",
+    "Tech":"Technologies",
+    "Products":"Our Products",
+    "mInfo":"More Information"
   },
+  "Tabs":{
+    "Lang":"Programming Languages"
+  },
+  "Products":{
+    "Access":{
+      "Title":"Network with Private Access Management",
+      "Subtitle1":"Social",
+      "Cont1":"Photos, videos and trip comments for private groups of passengers and relatives.",
+      "Subtitle2":"Tracking",
+      "Cont2":"NFC and QR access control with self-managed individual data records.",
+      "Subtitle3":"Event Organization",
+      "Cont3":"Easy itinerary tracking with a simplified interface"
+    },
+    "Suite":{
+      "Paragraph":"Explore our courses built on teachings drawn from years of professional experience in the field of programming. Receive personalized guidance from seasoned experts and deepen your knowledge across a wide variety of technologies.",
+      "Subtitle":"Our Courses",
+      "Info":"More Info ↗",
+      "Test":"Testimonies"
+    }
+  }
+  ,
   "About": {
     "text": "This is the about page"
   },

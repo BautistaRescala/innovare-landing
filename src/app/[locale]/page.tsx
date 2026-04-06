@@ -14,6 +14,7 @@ const suitefont = Quicksand({ subsets: ['latin'] })
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('HomePage');
+  const tp = useTranslations('Products');
   return (
     <div>
       <div className="md:mt-20 mt-8 mb-24 bg-[url('/homepage1.jpg')] bg-contain bg-no-repeat bg-right">
@@ -35,25 +36,25 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       <div className={`${contentfont.className} flex-col md:flex-row flex justify-between`}>
         <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
           <CommandLineIcon className="size-14 mb-1 text-orange-600"></CommandLineIcon>
-          <p className='font-semibold text-3xl '>Desarrollo de Aplicaciones</p>
-          <p className=" mt-5 px-8 mx-4 text-lg">Desarrollamos aplicaciones a nivel experto que se encajan a las necesidades de tu empresa. Nos integramos de manera facil y comoda a los sistemas de tu empresa para que obtengas los mejores resultados para tus requisitos.</p>
+          <p className='font-semibold text-3xl '>{t('DevTitle')}</p>
+          <p className=" mt-5 px-8 mx-4 text-lg">{t('Dev')}</p>
         </div>
         <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
           <UserPlusIcon className="size-14 mb-1 text-green-600"></UserPlusIcon>
-          <p className='font-semibold text-3xl '>Staff Augmentation</p>
-          <p className=" mt-5 px-8 mx-4 text-lg">Incorpore a su staff un equipo de profesionales dedicados y entrenados con la máxima innovación. Le proveemos las herramientas a tu empresa para impulsar tu desarrollo sin comprometer tu estructura a largo plazo.</p>
+          <p className='font-semibold text-3xl '>{t('StaffTitle')}</p>
+          <p className=" mt-5 px-8 mx-4 text-lg">{t('StaffCont')}</p>
         </div>
         <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">
           <CircleStackIcon className="size-14 mb-1 text-blue-700"></CircleStackIcon>
-          <p className='font-semibold text-3xl '>Gestión de Base de datos</p>
-          <p className=" mt-5 px-8 mx-4 text-lg">Simplificamos el analisis y manejo de estructuras complejas de datos. Aseguramos la seguridad, integridad y optimizacion de tus sistemas para mantener el apto funcionamiento de tus servicios.</p>
+          <p className='font-semibold text-3xl '>{t('DataTitle')}</p>
+          <p className=" mt-5 px-8 mx-4 text-lg">{t('Data')}</p>
         </div>
       </div>
       <div className={`${contentfont.className} flex justify-center md:justify-end mt-3 mb-24`}>
         <div className="flex md:w-52 md:mx-24 hover:px-4 text-gray-800 hover:text-red-950 transition-all">
           <Link href="/services">
             <div className="flex flex-row justify-center items-center">
-              <p className="text-lg inline-block">Mas Información</p>
+              <p className="text-lg inline-block">{t('mInfo')}</p>
               <ArrowRightIcon className="ml-2 w-5 h-5"></ArrowRightIcon>
             </div>
           </Link>
@@ -62,20 +63,20 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       {/* Tecnologies */}
       <div className="mb-24">
         <div className="text-center">
-          <p className={`${contentfont.className} text-center text-2xl font-normal mx-4 mb-7 inline-block`}>Tecnologias</p>
+          <p className={`${contentfont.className} text-center text-2xl font-normal mx-4 mb-7 inline-block`}>{t('Tech')}</p>
         </div>
         <HomePageTab></HomePageTab>
       </div>
       {/* Productos */}
       <div className="text-center">
-          <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Nuestros Productos</p>
+          <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>{t('Products')}</p>
         </div>
       <div className="mb-24">
         <div className="flex items-center justify-center">
           <Image src={"/accessband.png"} alt="accessband logo" height={154} width={154}></Image>
         </div>
         <div className="text-center">
-          <p className={`${contentfont.className} text-center text-4xl font-extralight mx-4 mb-7 inline-block text-sky-950`}>Red social y controles de accessos privados</p>
+          <p className={`${contentfont.className} text-center text-4xl font-extralight mx-4 mb-7 inline-block text-sky-950`}>{tp('Access.Title')}</p>
         </div>
         <div className="flex flex-row items-center justify-center">
           <div className="hidden md:block">
@@ -87,8 +88,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 <ChatBubbleLeftRightIcon className="h-[85px] mx-1 text-cyan-950"></ChatBubbleLeftRightIcon>
               </div>
               <div>
-                <p className="font-bold text-lg text-slate-900">Social</p>
-                <p className="font-light text-md">Fotos, videos y comentarios de viajes para grupos privados de pasajeros y familiares.</p>
+                <p className="font-bold text-lg text-slate-900">{tp('Access.Subtitle1')}</p>
+                <p className="font-light text-md">{tp('Access.Cont1')}</p>
               </div>
             </div>
             <div className="flex flex-row">
@@ -96,8 +97,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 <ArrowsRightLeftIcon className="h-[85px] mx-1 text-cyan-950"></ArrowsRightLeftIcon>
               </div>
               <div>
-                <p className="font-bold text-lg text-slate-900">Seguimiento</p>
-                <p className="font-light text-md">Control de accesos NFC y QR con Fichas de datos individuales autogestionadas.</p>
+                <p className="font-bold text-lg text-slate-900">{tp('Access.Subtitle2')}</p>
+                <p className="font-light text-md">{tp('Access.Cont2')}</p>
               </div>
             </div>
             <div className="flex flex-row ">
@@ -105,8 +106,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 <CalendarDaysIcon className="h-[85px] mx-1 text-cyan-950"></CalendarDaysIcon>
               </div>
               <div>
-                <p className="font-bold text-lg text-slate-900">Organizacion de Eventos</p>
-                <p className="font-light text-md">Facil seguimiento de itinerarios con una interfaz simplificada</p>
+                <p className="font-bold text-lg text-slate-900">{tp('Access.Subtitle3')}</p>
+                <p className="font-light text-md">{tp('Access.Cont3')}</p>
               </div>
             </div>
           </div>
@@ -125,15 +126,15 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <div className="h-20 w-full flex items-center justify-center mb-5">
                 <BookOpenIcon className="h-full w-full text-gray-700"></BookOpenIcon>
               </div>
-              <p className=" text-justify  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vitae, praesentium dolores ipsum aperiam, dolor quam recusandae eius suscipit corporis illum voluptatem molestias nihil, tempora quod aspernatur at sint aut.</p>
+              <p className=" text-justify  ">{tp('Suite.Paragraph')}</p>
               <div className="w-full h-full text-red-950  flex justify-end items-end p-4 font-light">
-                <Link href="https://www.innovaresuite.com/#/" className="opacity-70 hover:opacity-100">Mas Informacion ↗</Link>
+                <Link href="https://www.innovaresuite.com/#/" className="opacity-70 hover:opacity-100">{tp("Suite.Info")}</Link>
               </div>
             </div>
             <div className="w-[50%] m-6 flex justify-between items-center flex-col">
               <div className="mt-4 w-[80%] h-16 flex justify-center items-center rounded-sm shadow-lg text-center bg-white">
                 <p className="bg-gradient-to-br from-red-700 from-5% via-red-950 to-99% to-red-400 bg-clip-text text-transparent text-xl">
-                  Nuestros cursos de capacitacion
+                  {tp('Suite.Subtitle')}
                 </p>
               </div>
               <div className="mb-1">
@@ -145,7 +146,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       </div>
       {/* Reviews */}
       <div className="text-center">
-        <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Testimonios</p>
+        <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>{tp("Suite.Test")}</p>
       </div>
       <div className="h-[2px] bg-gradient-to-r from-white via-gray-300 to-white from-30% to-70% mb-8"></div>
       <HomePageCarousel></HomePageCarousel>
