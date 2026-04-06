@@ -31,7 +31,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       {/* Middle section */}
       {/* Servicios */}
       <div className="text-center">
-        <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>Servicios Principales</p>
+        <p className={`${contentfont.className} text-center text-5xl font-normal mx-4 mb-7 inline-block`}>{t("Serv")}</p>
       </div>
       <div className={`${contentfont.className} flex-col md:flex-row flex justify-between`}>
         <div className=" md:w-[28%] w-[80] mx-8 mt-8 mb-4 flex flex-col items-center text-center">

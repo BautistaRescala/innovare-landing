@@ -17,7 +17,9 @@
     "Data":"We simplify the analysis and management of complex data structures. We ensure the security, integrity, and optimization of your systems to maintain the proper functioning of your services.",
     "Tech":"Technologies",
     "Products":"Our Products",
-    "mInfo":"More Information"
+    "mInfo":"More Information",
+    "Serv":"Main Stack",
+    "Contact":"Get in contact"
   },
   "Tabs":{
     "Lang":"Programming Languages"
